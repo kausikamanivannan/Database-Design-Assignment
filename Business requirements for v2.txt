@@ -1,0 +1,6 @@
+﻿In v2, users can create multiple playlists instead of just one.
+We can create a new table called user_playlist. Each row would have the details of each playlist and have a unique id column as the identifier. It would take in user_id from the user table as a reference key. Each column after the id value would hold the song position in the playlist; For example, a song that’s 10th in the playlist will be under the “song_10” column.
+
+
+Users will have multiple account types, each with different privileges (the product team is still working on what the types are, but right now it seems like "free", "standard", and "premium" are likely options).
+We can add a new column in the user table to take in which type of account they have. It would only take “free’, “standard”, and ‘premium” as the account types. More tables can be added to the schema; For example, only premium members can have multiple playlists. Therefore, we can implement the table from the above requirement for premium users only.
